@@ -15,11 +15,11 @@
             // # 服务器名称
             "ServerName": "服务器1",
             // # 服务器地址
-            "ServerUrl": "https://web-lifeishard4me.cloud.okteto.net",
+            "ServerUrl": "https://web-qinglong-lifeishard4me.cloud.okteto.net/",
             // # 青龙客户端ID
-            "ServerClientId":" _RdFmtctD1_K",
+            "ServerClientId":"g4zoX_FqPvb1",
             // # 青龙客户端密钥
-            "ServerSecret": "E75f15RdF_n_CacigNjHJQyL",
+            "ServerSecret": "VX6m-M69qIbiZ9c-syvvp4F2",
             // # 服务器最大CK数量
             "ServerMAXck": 99
         }
