@@ -1,2 +1,2 @@
 FROM kissyouhunter/maiark:latest
-COPY ./package.json /app
+COPY arkconfig.json /root/

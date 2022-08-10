@@ -1,0 +1,9 @@
+version: '2'
+services:
+  maiark:
+    build: .
+    volumes:
+      - .:/MaiARK
+    ports:
+      - "8082:8082"
+    restart: unless-stopped
