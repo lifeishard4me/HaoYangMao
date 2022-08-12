@@ -15,11 +15,11 @@
             // # 服务器名称
             "ServerName": "服务器1",
             // # 服务器地址
-            "ServerUrl": "https://web-cloudpwn.cloud.okteto.net",
+            "ServerUrl": $ServerUrl,
             // # 青龙客户端ID
-            "ServerClientId":"0Hq9_-3iRBqS",
+            "ServerClientId": $ServerClientId,
             // # 青龙客户端密钥
-            "ServerSecret": "latJO39Y4b1HQPxBTjvHcf-C",
+            "ServerSecret": $ServerSecret,
             // # 服务器最大CK数量
             "ServerMAXck": 99
         }
