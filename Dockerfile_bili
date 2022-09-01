@@ -2,7 +2,7 @@ FROM python:3.8.3-alpine
 WORKDIR bili
 RUN apk update\
     && apk add git\
-    && git clone https://github.com/spiritLHLS/LotteryAutoScript_Station bili/ \
+    && git clone https://github.com/spiritLHLS/LotteryAutoScript_Station.git bili/ \
     && pip install -r requirement.txt \
     && python run.py
 # ENTRYPOINT ["python3", "run.py"]
