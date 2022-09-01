@@ -1,0 +1,8 @@
+FROM python:3.8.3-alpine
+WORKDIR bili
+RUN git clone https://github.com/spiritLHLS/LotteryAutoScript_Station \
+    && cd LotteryAutoScript_Station \
+    && pip install -r requirement.txt \
+    && python run.py
+
+
