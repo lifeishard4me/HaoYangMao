@@ -63,6 +63,6 @@ RUN set -x \
     && echo "${USER}:${PASSWORD}" | chpasswd \
     && ssh-keygen -A
 
-ADD docker-entrypoint2.sh ./docker/
-RUN chmod +x /docker/docker-entrypoint2.sh
+ADD docker-entrypoint2.sh ql/docker/
+RUN chmod +x ql/docker/docker-entrypoint2.sh
 ENTRYPOINT ["./docker/docker-entrypoint2.sh"]
