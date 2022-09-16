@@ -65,4 +65,4 @@ RUN set -x \
 
 ADD docker-entrypoint2.sh ql/docker/
 RUN chmod +x ql/docker/docker-entrypoint2.sh
-ENTRYPOINT ["./docker/docker-entrypoint2.sh"]
+ENTRYPOINT ["./ql/docker/docker-entrypoint2.sh"]
