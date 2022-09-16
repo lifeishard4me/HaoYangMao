@@ -61,8 +61,8 @@ RUN set -x \
     && rm -rf /var/cache/apk/* \
     && sed -i s/#PermitRootLogin.*/PermitRootLogin\ yes/ /etc/ssh/sshd_config \
     && echo "${USER}:${PASSWORD}" | chpasswd \
-    && ssh-keygen -A \
+    && ssh-keygen -A
 
 ADD docker-entrypoint2.sh ./docker/
-RUN chmod +x docker/docker-entrypoint2.sh
+RUN chmod +x /docker/docker-entrypoint2.sh
 ENTRYPOINT ["./docker/docker-entrypoint2.sh"]
