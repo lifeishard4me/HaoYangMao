@@ -63,5 +63,6 @@ RUN set -x \
     && sed -i s/#PermitRootLogin.*/PermitRootLogin\ yes/ /etc/ssh/sshd_config \
     && echo "${USER}:${PASSWORD}" | chpasswd \
     && ssh-keygen -A 
+ADD docker-entrypoint2.sh ./docker/
     
 ENTRYPOINT ["./docker/docker-entrypoint2.sh"]
