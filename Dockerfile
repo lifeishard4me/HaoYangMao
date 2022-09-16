@@ -17,7 +17,7 @@ ENV PNPM_HOME=/root/.local/share/pnpm \
     QL_BRANCH=${QL_BRANCH}
 
 WORKDIR ${QL_DIR}
-
+ADD docker-entrypoint2.sh ./docker/
 RUN set -x \
     && sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories \
     && apk update -f \
@@ -62,7 +62,8 @@ RUN set -x \
     && rm -rf /var/cache/apk/* \
     && sed -i s/#PermitRootLogin.*/PermitRootLogin\ yes/ /etc/ssh/sshd_config \
     && echo "${USER}:${PASSWORD}" | chpasswd \
-    && ssh-keygen -A 
-ADD docker-entrypoint2.sh ./docker/
+    && ssh-keygen -A \
+    && chmod +x docker/docker-entrypoint2.sh
+
     
 ENTRYPOINT ["./docker/docker-entrypoint2.sh"]
