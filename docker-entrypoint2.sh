@@ -1,5 +1,6 @@
 #!/bin/bash
 
+echo -e "======================0. 开启ssh服务========================\n"
 nohup /usr/sbin/sshd -D -e > nohupcmd.out 2>&1 &
 
 dir_shell=/ql/shell
