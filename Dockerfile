@@ -1,4 +1,4 @@
-FROM node:alpine
+FROM tangramor/nginx-php8-fpm:latest
 
 ARG QL_MAINTAINER="whyour"
 LABEL maintainer="${QL_MAINTAINER}"
@@ -63,6 +63,4 @@ RUN set -x \
     && echo "${USER}:${PASSWORD}" | chpasswd \
     && ssh-keygen -A
 
-ADD docker-entrypoint2.sh ./docker/
-RUN chmod +x ./docker/docker-entrypoint2.sh
-ENTRYPOINT ["./docker/docker-entrypoint2.sh"]
+ENTRYPOINT ["./docker/docker-entrypoint.sh"]
