@@ -1,4 +1,4 @@
-FROM tangramor/nginx-php8-fpm:latest
+FROM python:alpine
 
 ARG QL_MAINTAINER="whyour"
 LABEL maintainer="${QL_MAINTAINER}"
